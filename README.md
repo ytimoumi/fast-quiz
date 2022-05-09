@@ -22,7 +22,7 @@ go run main.go
 ### Host & port
 ````
 Started server on : 
-http://localhost:9444/v1/
+http://localhost:9444/
 
 Test with Curl:
 curl --location --request GET 'localhost:9444/v1/questions/1'
