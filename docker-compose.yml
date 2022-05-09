@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  fast-track-test:
+    build:
+      context: .
+      dockerfile: ./server/Dockerfile
+    container_name: server
+    volumes:
+      - ./server:/go/src/fast-track-test
+    ports:
+      - "9444:9444"
+    networks:
+      - fast
+    restart: on-failure
+
+
+networks:
+  fast:
+    external:
+      name: ytimoumi
