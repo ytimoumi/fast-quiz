@@ -14,6 +14,18 @@ services:
       - fast
     restart: on-failure
 
+  client-cli:
+    build:
+      context: .
+      dockerfile: ./client/Dockerfile
+    container_name: client
+    volumes:
+      - ./client:/go/src/client-cli
+    depends_on:
+      - fast-track-test
+    networks:
+      - fast
+    restart: on-failure
 
 networks:
   fast:
