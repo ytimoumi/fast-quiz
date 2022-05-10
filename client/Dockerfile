@@ -14,5 +14,5 @@ RUN go mod download
 
 COPY client/ .
 
-#CMD ["tail", "-f", "/dev/null"]
+CMD ["tail", "-f", "/dev/null"]
 #CMD go run main.go answer --id=1
