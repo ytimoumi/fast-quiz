@@ -11,6 +11,7 @@ docker run -it -p 9444:9444 server
 ### With docker-compose
 ````
 docker-compose build
+docker network create ytimoumi
 docker-compose up
 ````
 ### Without Docker
